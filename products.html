@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anuraj Industries - Our Products</title>
+    <meta name="description" content="Manufacturers of high quality adhesion promoters including IAC-10, Titanium Acetyl Acetonate (TAA), and Titanium Ammonium Lactate (LA) Chelate">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ===============================
+   Global Styles
+================================== */
+:root {
+    --primary-color: #0077b6;
+    --primary-dark: #005f8d;
+    --secondary-color: #f9f9f9;
+    --text-color: #333;
+    --text-light: #555;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    background: var(--white);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ===============================
+   Header
+================================== */
+header {
+    background: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: background 0.3s ease;
+}
+
+header.scrolled {
+    background: var(--secondary-color);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.logo h1 {
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    padding: 6px 10px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li.active a {
+    color: var(--primary-color);
+}
+
+.mobile-menu-btn {
+    display: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+/* ===============================
+   Buttons
+================================== */
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--primary-dark);
+}
+
+/* ===============================
+   Hero Section
+================================== */
+.hero,
+.product-hero {
+    background: url('https://www.anurajindustries.com/images/slideshow/01.jpeg') center/cover no-repeat;
+    color: var(--white);
+    padding: 4rem 0;
+    text-align: center;
+    background-blend-mode: multiply;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.hero h1,
+.product-hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero p,
+.product-hero p.lead {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.breadcrumb {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.breadcrumb a {
+    color: var(--white);
+    font-weight: 500;
+}
+
+.breadcrumb i {
+    margin: 0 8px;
+}
+
+/* ===============================
+   Section Titles
+================================== */
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section-title h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    position: relative;
+    display: inline-block;
+}
+
+.section-title h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+.section-title p {
+    color: var(--text-light);
+}
+
+/* ===============================
+   Product Cards
+================================== */
+.detailed-product-card {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.detailed-product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.product-image-container img {
+    max-width: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.product-details-container h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.product-specifications h4,
+.product-applications h4 {
+    margin-top: 15px;
+    color: #444;
+    font-size: 1rem;
+}
+
+.product-specifications ul,
+.product-applications ul {
+    padding-left: 15px;
+}
+
+.product-specifications li,
+.product-applications li {
+    margin-bottom: 6px;
+}
+
+/* ===============================
+   Technical Data Table
+================================== */
+.technical-data-section {
+    margin-top: 3rem;
+}
+
+.technical-data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.technical-data-table th,
+.technical-data-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.technical-data-table th {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+/* ===============================
+   Applications Section
+================================== */
+.applications-section {
+    padding: 3rem 0;
+}
+
+.bg-light {
+    background: var(--secondary-color);
+}
+
+.applications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 1.5rem;
+}
+
+.application-card {
+    background: var(--white);
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.application-card:hover {
+    transform: translateY(-3px);
+}
+
+.app-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* ===============================
+   CTA Section
+================================== */
+.cta {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 2rem;
+}
+
+.cta .btn {
+    background: var(--white);
+    color: var(--primary-color);
+}
+
+.cta .btn:hover {
+    background: var(--primary-dark);
+    color: var(--white);
+}
+
+/* ===============================
+   Footer
+================================== */
+footer {
+    background: #222;
+    color: #ccc;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-col h3 {
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #ccc;
+    font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+    color: var(--white);
+}
+
+.contact-info li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+.social-links a:hover {
+    color: var(--white);
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 1rem;
+}
+
+/* ===============================
+   Responsive
+================================== */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        display: none;
+        background: var(--white);
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        padding: 1rem;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .detailed-product-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-image-container img {
+        max-width: 100%;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <!-- Header (Consistent with Homepage) -->
+    <header id="header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Anuraj Industries Logo">
+                <h1>Anuraj <span>Industries</span></h1>
+            </div>
+
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown active">
+                        <a href="products.html">Products</a>
+                    </li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="quality.html">Quality</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="product-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Our Products</h1>
+                <p class="lead">High-performance organic titanates for diverse industrial applications</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> <i class="fas fa-chevron-right"></i> <span>Products</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Products Section -->
+    <section class="main-products section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Chemical Solutions</h2>
+                <p>Specialized formulations that enhance performance across multiple industries</p>
+            </div>
+
+            <!-- IAC-10 Product -->
+            <div class="detailed-product-card">
+                <div class="product-image-container">
+                    <img src="https://www.anurajindustries.com/images/slideshow/01.jpeg" alt="IAC-10 Product">
+                </div>
+                <div class="product-details-container">
+                    <h3>IAC-10 (Titanium Phosphate Complex)</h3>
+                    <div class="product-description">
+                        <p>IAC-10 is a Titanium Phosphate Complex that provides excellent crosslinking and superior adhesion to various substrates under heat and solvent conditions.</p>
+                        <p>It is used as an adhesion promoter for printing inks & paints.</p>
+                        
+                        <div class="product-specifications">
+                            <h4>Specifications:</h4>
+                            <ul>
+                                <li><strong>Appearance:</strong> Clear to slightly yellow liquid</li>
+                                <li><strong>Solubility:</strong> Soluble in organic solvents</li>
+                                <li><strong>Active Content:</strong> Approx. 50%</li>
+                                <li><strong>Specific Gravity:</strong> 1.2 - 1.3</li>
+                                <li><strong>Viscosity:</strong> 100 - 300 cps</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="product-applications">
+                            <h4>Applications:</h4>
+                            <ul>
+                                <li>Printing Inks</li>
+                                <li>Paints & Coatings</li>
+                                <li>Wire Enamels</li>
+                                <li>Adhesives</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAA Product -->
+            <div class="detailed-product-card">
+                <div class="product-image-container">
+                    <img src="https://www.anurajindustries.com/images/gallery/WhatsApp%20Image%202022-06-02%20at%206.38.42%20PM.jpeg" alt="TAA Product">
+                </div>
+                <div class="product-details-container">
+                    <h3>Titanium Acetyl Acetonate (TAA)</h3>
+                    <div class="product-description">
+                        <p>Titanium Acetylacetonates are available in multiple grades as yellow to red liquid chelates with varying percentages of active ingredient.</p>
+                        
+                        <div class="product-specifications">
+                            <h4>Specifications:</h4>
+                            <ul>
+                                <li><strong>Appearance:</strong> Yellow to red liquid</li>
+                                <li><strong>Solubility:</strong> Soluble in organic solvents</li>
+                                <li><strong>Active Content:</strong> 50-80% (depending on grade)</li>
+                                <li><strong>Specific Gravity:</strong> 1.1 - 1.3</li>
+                                <li><strong>Viscosity:</strong> 50 - 500 cps</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="product-applications">
+                            <h4>Applications:</h4>
+                            <ul>
+                                <li>Catalyst for esterification and polymerization</li>
+                                <li>Crosslinking agent</li>
+                                <li>Adhesion promoter</li>
+                                <li>Surface modifier</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LA Chelate Product -->
+            <div class="detailed-product-card">
+                <div class="product-image-container">
+                    <img src="https://www.anurajindustries.com/images/gallery/WhatsApp%20Image%202022-06-02%20at%206.35.42%20PM.jpeg" alt="LA Chelate Product">
+                </div>
+                <div class="product-details-container">
+                    <h3>Titanium Ammonium Lactate (LA) Chelate</h3>
+                    <div class="product-description">
+                        <p>Hydrolytically stable, chelated titanium solution in clear to light yellow aqueous liquid with approximately 50% active content.</p>
+                        
+                        <div class="product-specifications">
+                            <h4>Specifications:</h4>
+                            <ul>
+                                <li><strong>Appearance:</strong> Clear to light yellow liquid</li>
+                                <li><strong>Solubility:</strong> Water soluble</li>
+                                <li><strong>Active Content:</strong> Approx. 50%</li>
+                                <li><strong>pH:</strong> 6.0 - 8.0</li>
+                                <li><strong>Specific Gravity:</strong> 1.2 - 1.3</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="product-applications">
+                            <h4>Applications:</h4>
+                            <ul>
+                                <li>Water-based systems</li>
+                                <li>Paper coatings</li>
+                                <li>Textile treatments</li>
+                                <li>Adhesion promotion</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Data Section -->
+            <div class="technical-data-section">
+                <h3>Technical Data & Properties</h3>
+                <div class="data-table-container">
+                    <table class="technical-data-table">
+                        <thead>
+                            <tr>
+                                <th>Property</th>
+                                <th>IAC-10</th>
+                                <th>TAA</th>
+                                <th>LA Chelate</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Chemical Name</td>
+                                <td>Titanium Phosphate Complex</td>
+                                <td>Titanium Acetyl Acetonate</td>
+                                <td>Titanium Ammonium Lactate</td>
+                            </tr>
+                            <tr>
+                                <td>Appearance</td>
+                                <td>Clear to slightly yellow liquid</td>
+                                <td>Yellow to red liquid</td>
+                                <td>Clear to light yellow liquid</td>
+                            </tr>
+                            <tr>
+                                <td>Solubility</td>
+                                <td>Organic solvents</td>
+                                <td>Organic solvents</td>
+                                <td>Water</td>
+                            </tr>
+                            <tr>
+                                <td>Active Content</td>
+                                <td>~50%</td>
+                                <td>50-80%</td>
+                                <td>~50%</td>
+                            </tr>
+                            <tr>
+                                <td>Primary Use</td>
+                                <td>Adhesion promoter</td>
+                                <td>Catalyst/Crosslinker</td>
+                                <td>Water-based systems</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications Section -->
+    <section class="applications-section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Industry Applications</h2>
+                <p>Our products serve diverse industrial sectors with specialized solutions</p>
+            </div>
+
+            <div class="applications-grid">
+                <div class="application-card">
+                    <div class="app-icon">
+                        <i class="fas fa-paint-roller"></i>
+                    </div>
+                    <h3>Paints & Coatings</h3>
+                    <p>Enhancing adhesion and durability of industrial and decorative coatings</p>
+                </div>
+
+                <div class="application-card">
+                    <div class="app-icon">
+                        <i class="fas fa-print"></i>
+                    </div>
+                    <h3>Printing Inks</h3>
+                    <p>Improving ink adhesion to various substrates including plastics and metals</p>
+                </div>
+
+                <div class="application-card">
+                    <div class="app-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Wire & Cable</h3>
+                    <p>Enhancing properties of wire enamels and cable coatings</p>
+                </div>
+
+                <div class="application-card">
+                    <div class="app-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Industrial Catalysts</h3>
+                    <p>Facilitating esterification and polymerization reactions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Need Technical Specifications or Samples?</h2>
+            <p>Contact our technical team for detailed product information or to request samples</p>
+            <a href="contact.html" class="btn">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer (Consistent with Homepage) -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>About Us</h3>
+                    <p>Anuraj Industries is a leading manufacturer of organic titanates and adhesion promoters with expertise in chemical formulations.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="quality.html">Quality</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Products</h3>
+                    <ul class="footer-links">
+                        <li><a href="#iac-10">IAC-10</a></li>
+                        <li><a href="#taa">Titanium Acetyl Acetonate</a></li>
+                        <li><a href="#la">Titanium Ammonium Lactate</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Industrial Estate, Coimbatore, Tamil Nadu 641022, India</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+91 422 1234567</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@anurajindustries.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2023 Anuraj Industries. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle (Same as Homepage)
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const nav = document.getElementById('nav');
+        const dropdowns = document.querySelectorAll('.dropdown > a');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = nav.classList.contains('active') ?
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    nav.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Tab functionality for product categories
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all buttons
+                tabBtns.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                const category = this.dataset.category;
+                // You would add filtering logic here for the products
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anuraj Industries - Quality Assurance</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #0077b6;
+            --primary-dark: #005f8d;
+            --secondary-color: #f9f9f9;
+            --accent-color: #10b981;
+            --text-primary: #333;
+            --text-secondary: #555;
+            --text-light: #555;
+            --white: #fff;
+            --border-light: #e2e8f0;
+            --shadow-sm: 0 2px 10px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 15px rgba(0,0,0,0.05);
+            --shadow-lg: 0 6px 20px rgba(0,0,0,0.08);
+            --gradient-primary: linear-gradient(135deg, #0077b6 0%, #005f8d 100%);
+            --gradient-hero: linear-gradient(135deg, rgba(0, 119, 182, 0.9), rgba(0, 95, 141, 0.9));
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--white);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header Styles */
+        header {
+            background: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            transition: background 0.3s ease;
+        }
+
+        header.scrolled {
+            background: var(--secondary-color);
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.8rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        .logo h1 {
+            font-size: 1.4rem;
+            color: var(--text-primary);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        nav ul li a {
+            padding: 6px 10px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        nav ul li a:hover,
+        nav ul li.active a {
+            color: var(--primary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.4rem;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--gradient-hero);
+            color: white;
+            padding: 4rem 0;
+            margin-top: 70px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 3rem 0;
+        }
+
+        .bg-light {
+            background: var(--secondary-color);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .section-title h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--primary-color);
+            margin: 8px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Quality Items */
+        .quality-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+        }
+
+        .quality-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .quality-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .quality-icon::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: inherit;
+            opacity: 0.2;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.2; }
+            50% { transform: scale(1.1); opacity: 0.1; }
+            100% { transform: scale(1); opacity: 0.2; }
+        }
+
+        .quality-icon i {
+            font-size: 2rem;
+            color: white;
+            z-index: 1;
+            position: relative;
+        }
+
+        .quality-item h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .quality-item p {
+            color: var(--text-light);
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        /* Grid and Cards */
+        .grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            border: none;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .card-body {
+            padding: 2.5rem 2rem;
+            text-align: center;
+        }
+
+        .card .quality-icon {
+            margin: 0 auto 1.5rem;
+        }
+
+        .card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .main-footer {
+            background: #222;
+            color: #ccc;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .main-footer p {
+            opacity: 0.8;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                display: none;
+                background: var(--white);
+                position: absolute;
+                top: 70px;
+                right: 0;
+                width: 200px;
+                padding: 1rem;
+                box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+            }
+
+            nav.active ul {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero {
+                padding: 3rem 0;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section {
+                padding: 2rem 0;
+            }
+
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+
+            .quality-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 1.5rem;
+            }
+
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+
+            .card-body {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+
+            .quality-item {
+                padding: 1.5rem;
+            }
+
+            .card-body {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Anuraj Industries Logo">
+                <h1>Anuraj <span>Industries</span></h1>
+            </div>
+
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li class="active"><a href="quality.html">Quality</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2 class="fade-in">Quality Assurance</h2>
+                <p class="fade-in">Our commitment to excellence in every adhesion promoter product</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-title fade-in">
+                    <h2>Our Quality Standards</h2>
+                    <p>Ensuring consistency and performance in every chemical formulation</p>
+                </div>
+                <div class="quality-item fade-in">
+                    <div class="quality-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div>
+                        <h3>ISO 9001:2015 Certified Manufacturing</h3>
+                        <p>Our quality management system is certified to international standards, ensuring consistent quality in all our adhesion promoter formulations and manufacturing processes. Every batch meets stringent quality requirements for printing inks and paints applications.</p>
+                    </div>
+                </div>
+                <div class="quality-item fade-in">
+                    <div class="quality-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <div>
+                        <h3>Advanced Chemical Analysis</h3>
+                        <p>Every product undergoes comprehensive chemical analysis including color stability testing, viscosity measurement, adhesion strength evaluation, and heat resistance verification using state-of-the-art laboratory equipment.</p>
+                    </div>
+                </div>
+                <div class="quality-item fade-in">
+                    <div class="quality-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div>
+                        <h3>Statistical Process Control</h3>
+                        <p>We employ statistical process control methods to monitor critical parameters like titanium content, pH levels, and viscosity throughout production runs, ensuring batch-to-batch consistency.</p>
+                    </div>
+                </div>
+                <div class="quality-item fade-in">
+                    <div class="quality-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div>
+                        <h3>Expert Quality Team</h3>
+                        <p>Our quality assurance team consists of trained chemical engineers and laboratory technicians with specialized expertise in adhesion promoter chemistry and quality control methodologies.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section bg-light">
+            <div class="container">
+                <div class="section-title fade-in">
+                    <h2>Quality Control Process</h2>
+                    <p>Our comprehensive three-stage quality verification system</p>
+                </div>
+                <div class="grid grid-3">
+                    <div class="card fade-in">
+                        <div class="card-body">
+                            <div class="quality-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <h3>Raw Material Inspection</h3>
+                            <p>All incoming chemicals including titanium compounds, organic chelates, and solvents are verified for purity, composition, and material certifications before entering our production process.</p>
+                        </div>
+                    </div>
+                    <div class="card fade-in">
+                        <div class="card-body">
+                            <div class="quality-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <h3>In-Process Monitoring</h3>
+                            <p>Critical parameters such as reaction temperature, mixing time, and chemical composition are continuously monitored during formulation to ensure optimal product characteristics.</p>
+                        </div>
+                    </div>
+                    <div class="card fade-in">
+                        <div class="card-body">
+                            <div class="quality-icon">
+                                <i class="fas fa-clipboard-check"></i>
+                            </div>
+                            <h3>Final Product Testing</h3>
+                            <p>Completed adhesion promoters undergo comprehensive testing for color stability, viscosity, adhesion performance, and heat resistance before packaging and shipment to customers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2023 Anuraj Industries. All Rights Reserved. | Quality Adhesion Promoters for Printing Inks & Paints</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const nav = document.getElementById('nav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'var(--secondary-color)';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+                header.classList.add('scrolled');
+            } else {
+                header.style.background = 'var(--white)';
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.08)';
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Initialize animations on load
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.querySelectorAll('.hero .fade-in').forEach((el, index) => {
+                    setTimeout(() => {
+                        el.classList.add('visible');
+                    }, index * 200);
+                });
+            }, 300);
+        });
+    </script>
+</body>
+</html>
