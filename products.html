@@ -4,438 +4,762 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anuraj Industries - Our Products</title>
-    <meta name="description" content="Manufacturers of high quality adhesion promoters including IAC-10, Titanium Acetyl Acetonate (TAA), and Titanium Ammonium Lactate (LA) Chelate">
+    <title>Anuraj Industries - Our Products | Adhesion Promoters, IAC-10, TAA Supplier</title>
+    <meta name="description"
+        content="High quality adhesion promoters including IAC-10, Titanium Acetyl Acetonate (TAA), and Titanium Ammonium Lactate (LA) Chelate. Supplier of Titanium Chemicals in Maharashtra, and across India.">
+    <meta name="keywords"
+        content="Adhesion Promoters, IAC-10, TAA, LA Chelate, Titanium Chemicals India, Chemical Supplier Maharashtra">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Anuraj Industries – Adhesion Promoters, IAC-10, TAA Supplier">
+    <meta property="og:description"
+        content="High quality adhesion promoters including IAC-10, TAA, and LA Chelate. Supplier of Titanium Chemicals in Pune, Maharashtra, and across India.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.anurajindustries.com/products.html">
+    <meta property="og:image" content="https://www.anurajindustries.com/images/slideshow/01.jpeg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Anuraj Industries – Adhesion Promoters, IAC-10, TAA Supplier">
+    <meta name="twitter:description"
+        content="High quality adhesion promoters including IAC-10, TAA, and LA Chelate. Supplier of Titanium Chemicals in Pune, Maharashtra, and across India.">
+    <meta name="twitter:image" content="https://www.anurajindustries.com/images/slideshow/01.jpeg">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <!-- Font Awesome -->
+    <link rel="icon" href="/images/logo.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
 
+    <!-- Your existing style block -->
     <style>
+        :root {
+            --primary-color: #0077b6;
+            --primary-dark: #005f8d;
+            --secondary-color: #f9f9f9;
+            --text-color: #333;
+            --text-light: #555;
+            --white: #fff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 15px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
         /* ===============================
-   Global Styles
+    Header
+    ================================== */
+        /* ===============================
+   Header & Navigation - Fixed
 ================================== */
-:root {
-    --primary-color: #0077b6;
-    --primary-dark: #005f8d;
-    --secondary-color: #f9f9f9;
-    --text-color: #333;
-    --text-light: #555;
-    --white: #fff;
-}
+        header {
+            background: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            padding: 0 15px;
+        }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.8rem 0;
+            position: relative;
+        }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    color: var(--text-color);
-    background: var(--white);
-    line-height: 1.6;
-}
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 1002;
+            /* Higher than nav */
+        }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
 
-h1, h2, h3, h4 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-}
+        .logo h1 {
+            font-size: 1.4rem;
+            color: #0056b3;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
+        .logo span {
+            color: #ff6b00;
+        }
 
-ul {
-    list-style: none;
-}
+        /* Desktop Navigation */
+        nav {
+            display: flex;
+            align-items: center;
+        }
 
-/* ===============================
-   Header
+        nav ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            padding: 8px 12px;
+            font-weight: 500;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: block;
+            border-radius: 4px;
+        }
+
+        nav ul li a:hover,
+        nav ul li.active a {
+            color: var(--primary-color);
+            /* background: rgba(0, 86, 179, 0.1); */
+        }
+
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 5px;
+            z-index: 1002;
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-menu-btn.active {
+            transform: rotate(90deg);
+        }
+
+        /* Mobile Navigation */
+        @media (max-width: 992px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 320px;
+                height: 100vh;
+                background: var(--white);
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+                transition: right 0.4s ease;
+                z-index: 1001;
+                padding: 80px 20px 20px;
+                overflow-y: auto;
+            }
+
+            nav.active {
+                right: 0;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav ul li a {
+                padding: 12px 15px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            }
+
+            /* Overlay when menu is open */
+            .nav-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 1000;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+            }
+
+            .nav-overlay.active {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        /* Ensure content doesn't shift when scrollbar appears */
+        html {
+            overflow-x: hidden;
+            margin-right: calc(-1 * (100vw - 100%));
+        }
+
+        /* ===============================
+    Buttons
+    ================================== */
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 12px 24px;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* ===============================
+    Hero Section
+    ================================== */
+        .hero,
+        .product-hero {
+            background: url('images/IAC10.png') center/cover no-repeat;
+            color: var(--white);
+            padding: 5rem 0;
+            text-align: center;
+            background-blend-mode: multiply;
+            background-color: rgba(0, 0, 0, 0.4);
+            position: relative;
+        }
+
+        .hero h1,
+        .product-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p,
+        .product-hero p.lead {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .breadcrumb {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .breadcrumb a {
+            color: var(--white);
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .breadcrumb a:hover {
+            opacity: 0.8;
+        }
+
+        .breadcrumb i {
+            margin: 0 8px;
+            font-size: 0.7rem;
+        }
+
+        @media (max-width: 768px) {
+
+            .hero,
+            .product-hero {
+                padding: 3rem 0;
+            }
+
+            .hero h1,
+            .product-hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p,
+            .product-hero p.lead {
+                font-size: 1rem;
+            }
+        }
+
+        /* ===============================
+    Section Titles
+    ================================== */
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 0 15px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .section-title h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--primary-color);
+            margin: 8px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                margin-bottom: 2rem;
+            }
+
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* ===============================
+    Product Cards
+    ================================== */
+        /* ===============================
+   Product Cards - Responsive Fix
 ================================== */
-header {
-    background: var(--white);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    transition: background 0.3s ease;
-}
+        .detailed-product-card {
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-header.scrolled {
-    background: var(--secondary-color);
-}
+        .product-image-container {
+            flex: 1;
+            min-width: 250px;
+            max-width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.8rem 0;
-}
+        .product-image-container img {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: contain;
+            border-radius: 10px;
+        }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+        .product-details-container {
+            flex: 2;
+            min-width: 0;
+            /* Fixes flexbox overflow issues */
+        }
 
-.logo img {
-    height: 50px;
-}
+        .product-details-container h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: clamp(1.2rem, 2vw, 1.5rem);
+            /* Responsive font size */
+        }
 
-.logo h1 {
-    font-size: 1.4rem;
-    color: var(--text-color);
-}
+        .product-specifications,
+        .product-applications {
+            margin-top: 1.5rem;
+        }
 
-.logo span {
-    color: var(--primary-color);
-}
+        .product-specifications h4,
+        .product-applications h4 {
+            color: #444;
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+        }
 
-nav ul {
-    display: flex;
-    gap: 20px;
-}
+        .product-specifications ul,
+        .product-applications ul {
+            padding-left: 1.2rem;
+            columns: 2;
+            column-gap: 2rem;
+        }
 
-nav ul li a {
-    padding: 6px 10px;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
+        .product-specifications li,
+        .product-applications li {
+            margin-bottom: 0.5rem;
+            break-inside: avoid;
+            /* Prevents list items from breaking across columns */
+            position: relative;
+            padding-left: 1rem;
+        }
 
-nav ul li a:hover,
-nav ul li.active a {
-    color: var(--primary-color);
-}
+        .product-specifications li::before,
+        .product-applications li::before {
+            content: '•';
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
 
-.mobile-menu-btn {
-    display: none;
-    font-size: 1.4rem;
-    cursor: pointer;
-}
+        /* Responsive Adjustments */
+        @media (max-width: 1024px) {
+            .detailed-product-card {
+                gap: 1.5rem;
+                padding: 1.2rem;
+            }
 
-/* ===============================
-   Buttons
-================================== */
-.btn {
-    display: inline-block;
-    background: var(--primary-color);
-    color: var(--white);
-    padding: 10px 20px;
-    font-weight: 600;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-}
+            .product-specifications ul,
+            .product-applications ul {
+                columns: 1;
+            }
+        }
 
-.btn:hover {
-    background: var(--primary-dark);
-}
+        @media (max-width: 768px) {
+            .detailed-product-card {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
 
-/* ===============================
-   Hero Section
-================================== */
-.hero,
-.product-hero {
-    background: url('https://www.anurajindustries.com/images/slideshow/01.jpeg') center/cover no-repeat;
-    color: var(--white);
-    padding: 4rem 0;
-    text-align: center;
-    background-blend-mode: multiply;
-    background-color: rgba(0,0,0,0.4);
-}
+            .product-image-container {
+                min-width: 100%;
+                max-width: 100%;
+            }
 
-.hero h1,
-.product-hero h1 {
-    font-size: 2.5rem;
-}
+            .product-image-container img {
+                max-height: 250px;
+            }
 
-.hero p,
-.product-hero p.lead {
-    margin-top: 10px;
-    font-size: 1.1rem;
-    opacity: 0.9;
-}
+            .product-details-container {
+                width: 100%;
+            }
+        }
 
-.breadcrumb {
-    margin-top: 15px;
-    font-size: 0.9rem;
-}
+        @media (max-width: 480px) {
+            .detailed-product-card {
+                padding: 1rem;
+                margin-bottom: 2rem;
+            }
 
-.breadcrumb a {
-    color: var(--white);
-    font-weight: 500;
-}
+            .product-details-container h3 {
+                font-size: 1.3rem;
+            }
 
-.breadcrumb i {
-    margin: 0 8px;
-}
+            .product-specifications h4,
+            .product-applications h4 {
+                font-size: 1rem;
+            }
 
-/* ===============================
-   Section Titles
-================================== */
-.section-title {
-    text-align: center;
-    margin-bottom: 2rem;
-}
+            .product-specifications li,
+            .product-applications li {
+                font-size: 0.9rem;
+            }
+        }
 
-.section-title h2 {
-    font-size: 2rem;
-    color: var(--primary-color);
-    position: relative;
-    display: inline-block;
-}
+        /* ===============================
+    Technical Data Table
+    ================================== */
+        .technical-data-section {
+            margin-top: 3rem;
+            overflow-x: auto;
+        }
 
-.section-title h2::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 3px;
-    background: var(--primary-color);
-    margin: 8px auto 0;
-    border-radius: 2px;
-}
+        .technical-data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            min-width: 600px;
+        }
 
-.section-title p {
-    color: var(--text-light);
-}
+        .technical-data-table th,
+        .technical-data-table td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
 
-/* ===============================
-   Product Cards
-================================== */
-.detailed-product-card {
-    display: flex;
-    gap: 2rem;
-    margin-bottom: 3rem;
-    background: var(--white);
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+        .technical-data-table th {
+            background: var(--primary-color);
+            color: var(--white);
+            font-weight: 500;
+        }
 
-.detailed-product-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-}
+        .technical-data-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
 
-.product-image-container img {
-    max-width: 300px;
-    border-radius: 10px;
-    object-fit: cover;
-}
+        .technical-data-table tr:hover {
+            background-color: #f1f1f1;
+        }
 
-.product-details-container h3 {
-    color: var(--primary-color);
-    margin-bottom: 10px;
-}
+        @media (max-width: 768px) {
+            .technical-data-section {
+                margin-top: 2rem;
+            }
+        }
 
-.product-specifications h4,
-.product-applications h4 {
-    margin-top: 15px;
-    color: #444;
-    font-size: 1rem;
-}
+        /* ===============================
+    Applications Section
+    ================================== */
+        .applications-section {
+            padding: 3rem 0;
+        }
 
-.product-specifications ul,
-.product-applications ul {
-    padding-left: 15px;
-}
+        .bg-light {
+            background: var(--secondary-color);
+        }
 
-.product-specifications li,
-.product-applications li {
-    margin-bottom: 6px;
-}
+        .applications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
 
-/* ===============================
-   Technical Data Table
-================================== */
-.technical-data-section {
-    margin-top: 3rem;
-}
+        .application-card {
+            background: var(--white);
+            padding: 1.5rem;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
 
-.technical-data-table {
-    width: 100%;
-    border-collapse: collapse;
-}
+        .application-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
 
-.technical-data-table th,
-.technical-data-table td {
-    padding: 12px;
-    border: 1px solid #ddd;
-    text-align: center;
-}
+        .app-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
 
-.technical-data-table th {
-    background: var(--primary-color);
-    color: var(--white);
-}
+        .application-card h3 {
+            margin-bottom: 0.8rem;
+            color: var(--primary-color);
+        }
 
-/* ===============================
-   Applications Section
-================================== */
-.applications-section {
-    padding: 3rem 0;
-}
+        .application-card p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
 
-.bg-light {
-    background: var(--secondary-color);
-}
+        /* ===============================
+    CTA Section
+    ================================== */
+        .cta {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 3rem 0;
+            text-align: center;
+        }
 
-.applications-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    gap: 1.5rem;
-}
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
 
-.application-card {
-    background: var(--white);
-    padding: 1.5rem;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
-}
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
 
-.application-card:hover {
-    transform: translateY(-3px);
-}
+        .cta .btn {
+            background: var(--white);
+            color: var(--primary-color);
+            font-weight: 600;
+            padding: 12px 30px;
+        }
 
-.app-icon {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 10px;
-}
+        .cta .btn:hover {
+            background: var(--primary-dark);
+            color: var(--white);
+        }
 
-/* ===============================
-   CTA Section
-================================== */
-.cta {
-    background: var(--primary-color);
-    color: var(--white);
-    padding: 3rem 0;
-    text-align: center;
-}
+        @media (max-width: 768px) {
+            .cta {
+                padding: 2rem 0;
+            }
 
-.cta h2 {
-    font-size: 2rem;
-}
+            .cta h2 {
+                font-size: 1.8rem;
+            }
+        }
 
-.cta .btn {
-    background: var(--white);
-    color: var(--primary-color);
-}
+        /* ===============================
+    Footer
+    ================================== */
+        footer {
+            background: #111;
+            color: #ccc;
+            padding: 3rem 0 1.5rem;
+        }
 
-.cta .btn:hover {
-    background: var(--primary-dark);
-    color: var(--white);
-}
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
 
-/* ===============================
-   Footer
-================================== */
-footer {
-    background: #222;
-    color: #ccc;
-    padding: 3rem 0 1rem;
-}
+        .footer-col h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
 
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--primary-color);
+        }
 
-.footer-col h3 {
-    color: var(--white);
-    margin-bottom: 1rem;
-}
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
 
-.footer-links li {
-    margin-bottom: 8px;
-}
+        .footer-links a {
+            color: #ccc;
+            transition: color 0.3s;
+            display: inline-block;
+            padding: 2px 0;
+        }
 
-.footer-links a {
-    color: #ccc;
-    font-size: 0.95rem;
-}
+        .footer-links a:hover {
+            color: var(--primary-color);
+            transform: translateX(3px);
+        }
 
-.footer-links a:hover {
-    color: var(--white);
-}
+        .contact-info li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
 
-.contact-info li {
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
+        .contact-info i {
+            color: var(--primary-color);
+            margin-top: 3px;
+        }
 
-.social-links a {
-    display: inline-block;
-    margin-right: 10px;
-    font-size: 1.1rem;
-    color: #ccc;
-}
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 1rem;
+        }
 
-.social-links a:hover {
-    color: var(--white);
-}
+        .social-links a {
+            color: #ccc;
+            font-size: 1.2rem;
+            transition: color 0.3s, transform 0.3s;
+        }
 
-.footer-bottom {
-    text-align: center;
-    font-size: 0.85rem;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    padding-top: 1rem;
-}
+        .social-links a:hover {
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
 
-/* ===============================
-   Responsive
-================================== */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        display: none;
-        background: var(--white);
-        position: absolute;
-        top: 70px;
-        right: 0;
-        width: 200px;
-        padding: 1rem;
-        box-shadow: 0 3px 12px rgba(0,0,0,0.1);
-    }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid #333;
+            font-size: 0.85rem;
+            color: #aaa;
+        }
 
-    nav.active ul {
-        display: flex;
-    }
+        .contact-info a {
+            color: #efc855;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
 
-    .mobile-menu-btn {
-        display: block;
-    }
+        .contact-info a:hover {
+            color: #f8dc5d;
+            text-decoration: underline;
+        }
 
-    .detailed-product-card {
-        flex-direction: column;
-        align-items: center;
-    }
+        @media (max-width: 768px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
 
-    .product-image-container img {
-        max-width: 100%;
-    }
-}
-
+            .footer-col h3 {
+                margin-bottom: 1rem;
+            }
+        }
     </style>
 </head>
+
 
 <body>
     <!-- Header (Consistent with Homepage) -->
@@ -470,32 +794,137 @@ footer {
             <div class="hero-content">
                 <h1>Our Products</h1>
                 <p class="lead">High-performance organic titanates for diverse industrial applications</p>
-                <div class="breadcrumb">
-                    <a href="index.html">Home</a> <i class="fas fa-chevron-right"></i> <span>Products</span>
-                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Main Products Section -->
-    <section class="main-products section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Chemical Solutions</h2>
-                <p>Specialized formulations that enhance performance across multiple industries</p>
+    <section class="main-products section"
+        style="font-family: Arial, sans-serif; background: #f9f9f9; padding: 40px 0;">
+        <div class="container" style="max-width: 1200px; margin: auto;">
+
+            <div class="section-title" style="text-align: center; margin-bottom: 30px;">
+                <h2 style="font-size: 32px; color: #333;">Our Chemical Solutions</h2>
+                <p style="color: #555; font-size: 16px;">Specialized formulations that enhance performance across
+                    multiple industries</p>
+                <a href="https://drive.google.com/file/d/1Ra_RjvdmMidQeZof_51oxsD4WuPH4SSM/view?usp=sharing"
+                    target="_blank"
+                    style="display:inline-block; padding:12px 25px; margin-top:15px; background-color:#ff6600; color:#fff; text-decoration:none; font-weight:bold; border-radius:8px; transition:0.3s; box-shadow:0 4px 10px rgba(0,0,0,0.15);">
+                    📄 Download Brochure
+                </a>
             </div>
+
+            <style>
+                .detailed-product-card {
+                    display: flex;
+                    flex-wrap: wrap;
+                    background: #fff;
+                    border-radius: 12px;
+                    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+                    margin-bottom: 30px;
+                    overflow: hidden;
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                }
+
+                .detailed-product-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+                }
+
+                .product-image-container {
+                    flex: 1 1 40%;
+                    min-width: 300px;
+                }
+
+                .product-image-container img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                    filter: brightness(95%);
+                    transition: filter 0.3s ease;
+                }
+
+                .detailed-product-card:hover img {
+                    filter: brightness(105%);
+                }
+
+                .product-details-container {
+                    flex: 1 1 60%;
+                    padding: 20px 25px;
+                }
+
+                .product-details-container h3 {
+                    margin-bottom: 10px;
+                    color: #ff6600;
+                }
+
+                .product-description p {
+                    color: #555;
+                    line-height: 1.6;
+                }
+
+                .product-specifications h4,
+                .product-applications h4 {
+                    margin-top: 15px;
+                    color: #333;
+                    border-bottom: 2px solid #eee;
+                    padding-bottom: 5px;
+                }
+
+                .product-specifications ul,
+                .product-applications ul {
+                    list-style: disc;
+                    padding-left: 20px;
+                    margin-top: 8px;
+                }
+
+                .technical-data-section {
+                    margin-top: 40px;
+                    background: #fff;
+                    padding: 20px;
+                    border-radius: 12px;
+                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+                }
+
+                .technical-data-section h3 {
+                    color: #333;
+                    margin-bottom: 15px;
+                }
+
+                .technical-data-table {
+                    width: 100%;
+                    border-collapse: collapse;
+                }
+
+                .technical-data-table th,
+                .technical-data-table td {
+                    border: 1px solid #ddd;
+                    padding: 10px;
+                    text-align: left;
+                }
+
+                .technical-data-table th {
+                    background: #ff6600;
+                    color: #fff;
+                }
+
+                .technical-data-table tr:nth-child(even) {
+                    background: #f8f8f8;
+                }
+            </style>
 
             <!-- IAC-10 Product -->
             <div class="detailed-product-card">
                 <div class="product-image-container">
-                    <img src="https://www.anurajindustries.com/images/slideshow/01.jpeg" alt="IAC-10 Product">
+                    <img src="images/IAC10.png" alt="IAC-10 Product">
                 </div>
                 <div class="product-details-container">
                     <h3>IAC-10 (Titanium Phosphate Complex)</h3>
                     <div class="product-description">
-                        <p>IAC-10 is a Titanium Phosphate Complex that provides excellent crosslinking and superior adhesion to various substrates under heat and solvent conditions.</p>
+                        <p style=" text-align: justify;">IAC-10 is a Titanium Phosphate Complex that provides excellent crosslinking and superior
+                            adhesion to various substrates under heat and solvent conditions.</p>
                         <p>It is used as an adhesion promoter for printing inks & paints.</p>
-                        
                         <div class="product-specifications">
                             <h4>Specifications:</h4>
                             <ul>
@@ -506,7 +935,6 @@ footer {
                                 <li><strong>Viscosity:</strong> 100 - 300 cps</li>
                             </ul>
                         </div>
-                        
                         <div class="product-applications">
                             <h4>Applications:</h4>
                             <ul>
@@ -523,13 +951,13 @@ footer {
             <!-- TAA Product -->
             <div class="detailed-product-card">
                 <div class="product-image-container">
-                    <img src="https://www.anurajindustries.com/images/gallery/WhatsApp%20Image%202022-06-02%20at%206.38.42%20PM.jpeg" alt="TAA Product">
+                    <img src="images/TAA.png" alt="TAA Product">
                 </div>
                 <div class="product-details-container">
                     <h3>Titanium Acetyl Acetonate (TAA)</h3>
                     <div class="product-description">
-                        <p>Titanium Acetylacetonates are available in multiple grades as yellow to red liquid chelates with varying percentages of active ingredient.</p>
-                        
+                        <p style=" text-align: justify;">Titanium Acetylacetonates are available in multiple grades as yellow to red liquid chelates
+                            with varying percentages of active ingredient.</p>
                         <div class="product-specifications">
                             <h4>Specifications:</h4>
                             <ul>
@@ -540,7 +968,6 @@ footer {
                                 <li><strong>Viscosity:</strong> 50 - 500 cps</li>
                             </ul>
                         </div>
-                        
                         <div class="product-applications">
                             <h4>Applications:</h4>
                             <ul>
@@ -557,13 +984,13 @@ footer {
             <!-- LA Chelate Product -->
             <div class="detailed-product-card">
                 <div class="product-image-container">
-                    <img src="https://www.anurajindustries.com/images/gallery/WhatsApp%20Image%202022-06-02%20at%206.35.42%20PM.jpeg" alt="LA Chelate Product">
+                    <img src="images/LA.png" alt="LA Chelate Product">
                 </div>
                 <div class="product-details-container">
                     <h3>Titanium Ammonium Lactate (LA) Chelate</h3>
                     <div class="product-description">
-                        <p>Hydrolytically stable, chelated titanium solution in clear to light yellow aqueous liquid with approximately 50% active content.</p>
-                        
+                        <p style=" text-align: justify;">Hydrolytically stable, chelated titanium solution in clear to light yellow aqueous liquid
+                            with approximately 50% active content.</p>
                         <div class="product-specifications">
                             <h4>Specifications:</h4>
                             <ul>
@@ -574,7 +1001,6 @@ footer {
                                 <li><strong>Specific Gravity:</strong> 1.2 - 1.3</li>
                             </ul>
                         </div>
-                        
                         <div class="product-applications">
                             <h4>Applications:</h4>
                             <ul>
@@ -636,8 +1062,11 @@ footer {
                     </table>
                 </div>
             </div>
+
         </div>
     </section>
+
+
 
     <!-- Applications Section -->
     <section class="applications-section bg-light">
@@ -698,15 +1127,8 @@ footer {
             <div class="footer-content">
                 <div class="footer-col">
                     <h3>About Us</h3>
-                    <p>Anuraj Industries is a leading manufacturer of organic titanates and adhesion promoters with expertise in chemical formulations.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
+                    <p style=" text-align: justify;"> Anuraj Industries is a leading manufacturer of precision engineering components with over 25 years of experience in the industry.</p>
                 </div>
-
                 <div class="footer-col">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
@@ -717,35 +1139,40 @@ footer {
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-col">
                     <h3>Products</h3>
                     <ul class="footer-links">
-                        <li><a href="#iac-10">IAC-10</a></li>
-                        <li><a href="#taa">Titanium Acetyl Acetonate</a></li>
-                        <li><a href="#la">Titanium Ammonium Lactate</a></li>
+                        <li><a href="products.html#cnc">IAC-10 Adhesion Promoter</a></li>
+                        <li><a href="products.html#turned">TAA Adhesion Promoter</a></li>
+                        <li><a href="products.html#special">LA Adhesion Promoter</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-col">
                     <h3>Contact Us</h3>
                     <ul class="contact-info">
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>123 Industrial Estate, Coimbatore, Tamil Nadu 641022, India</span>
+                            <span>Plot No C 4/5 MIDC Paithan,<br> Dist Chh. Sambhajinagar (Aurangabad) 431148</span>
                         </li>
                         <li>
                             <i class="fas fa-phone"></i>
-                            <span>+91 422 1234567</span>
+                            <span><a href="tel:+917588534055">+91 75885 34055</a></span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span><a href="tel:+917745077123">+91 77450 77123</a></span>
                         </li>
                         <li>
                             <i class="fas fa-envelope"></i>
-                            <span>info@anurajindustries.com</span>
+                            <span>
+                                <a href="mailto:rajutambe5@rediffmail.com">rajutambe5@rediffmail.com</a><br>
+                                <a href="mailto:info@anurajindustries.com">info@anurajindustries.com</a><br>
+                                <a href="mailto:raviraj@anurajindustries.com">raviraj@anurajindustries.com</a>
+                            </span>
                         </li>
                     </ul>
                 </div>
             </div>
-
             <div class="footer-bottom">
                 <p>&copy; 2023 Anuraj Industries. All Rights Reserved.</p>
             </div>
@@ -767,7 +1194,7 @@ footer {
 
         // Close mobile menu when clicking a link
         document.querySelectorAll('#nav a').forEach(link => {
-            link.addEventListener('click', function() {
+            link.addEventListener('click', function () {
                 if (window.innerWidth <= 768) {
                     nav.classList.remove('active');
                     mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
@@ -788,16 +1215,17 @@ footer {
         // Tab functionality for product categories
         const tabBtns = document.querySelectorAll('.tab-btn');
         tabBtns.forEach(btn => {
-            btn.addEventListener('click', function() {
+            btn.addEventListener('click', function () {
                 // Remove active class from all buttons
                 tabBtns.forEach(btn => btn.classList.remove('active'));
                 // Add active class to clicked button
                 this.classList.add('active');
-                
+
                 const category = this.dataset.category;
                 // You would add filtering logic here for the products
             });
         });
     </script>
 </body>
+
 </html>

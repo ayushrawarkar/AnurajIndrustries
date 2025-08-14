@@ -1,11 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anuraj Industries - About Us</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Learn about Anuraj Industries - Leading manufacturer and supplier of high-quality Adhesion Promoters including IAC-10, TAA, and LA Chelate. Serving Pune, Maharashtra, and across India.">
+    <meta name="keywords"
+        content="Anuraj Industries, About Us, Adhesion Promoters, IAC-10, TAA, LA Chelate, Titanium Chemicals, Chemical Supplier Pune, Maharashtra, India">
+    <meta name="author" content="Anuraj Industries">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://www.anurajindustries.com/images/logo.png" type="image/png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Anuraj Industries – About Us | Adhesion Promoters, IAC-10, TAA Supplier">
+    <meta property="og:description"
+        content="Anuraj Industries is a leading manufacturer and supplier of high-quality Adhesion Promoters including IAC-10, TAA, and LA Chelate. Serving Pune, Maharashtra, and across India.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.anurajindustries.com/about.html">
+    <meta property="og:image" content="https://www.anurajindustries.com/images/slideshow/01.jpeg">
+    <meta property="og:locale" content="en_IN">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Anuraj Industries – About Us | Adhesion Promoters, IAC-10, TAA Supplier">
+    <meta name="twitter:description"
+        content="Anuraj Industries is a leading manufacturer and supplier of high-quality Adhesion Promoters including IAC-10, TAA, and LA Chelate. Serving Pune, Maharashtra, and across India.">
+    <meta name="twitter:image" content="https://www.anurajindustries.com/images/slideshow/01.jpeg">
+    <meta name="twitter:site" content="@AnurajIndustries">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="/images/logo.png" type="image/png">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Structured Data / JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Anuraj Industries",
+      "url": "https://www.anurajindustries.com/",
+      "logo": "https://www.anurajindustries.com/images/logo.png",
+      "sameAs": [
+        "https://www.facebook.com/anurajindustries",
+        "https://www.linkedin.com/company/anurajindustries"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91 XXX XXX XXXX",
+        "contactType": "customer support",
+        "areaServed": "IN",
+        "availableLanguage": "en"
+      }
+    }
+    </script>
+
+    <!-- Your existing styles -->
     <style>
         * {
             margin: 0;
@@ -17,24 +78,18 @@
             --primary-color: #0077b6;
             --primary-dark: #005f8d;
             --secondary-color: #f9f9f9;
-            --accent-color: #10b981;
-            --text-primary: #333;
-            --text-secondary: #555;
-            --text-light: #555;
             --white: #fff;
-            --border-light: #e2e8f0;
-            --shadow-sm: 0 2px 10px rgba(0,0,0,0.08);
-            --shadow-md: 0 4px 15px rgba(0,0,0,0.05);
-            --shadow-lg: 0 6px 20px rgba(0,0,0,0.08);
-            --gradient-primary: linear-gradient(135deg, #0077b6 0%, #005f8d 100%);
+            --text-primary: #333;
+            --text-light: #555;
+            --shadow-md: 0 4px 15px rgba(0, 0, 0, 0.05);
             --gradient-hero: linear-gradient(135deg, rgba(0, 119, 182, 0.9), rgba(0, 95, 141, 0.9));
         }
 
         body {
             font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
             color: var(--text-primary);
-            background-color: var(--white);
+            background: var(--white);
+            line-height: 1.6;
         }
 
         .container {
@@ -43,18 +98,13 @@
             padding: 0 20px;
         }
 
-        /* Header Styles */
+        /* Header */
         header {
             background: var(--white);
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-            transition: background 0.3s ease;
-        }
-
-        header.scrolled {
-            background: var(--secondary-color);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
         }
 
         .header-container {
@@ -76,13 +126,14 @@
 
         .logo h1 {
             font-size: 1.4rem;
-            color: var(--text-primary);
+            
+            color:#0056b3;
             font-family: 'Montserrat', sans-serif;
             font-weight: 600;
         }
 
         .logo span {
-            color: var(--primary-color);
+            color:#0056b3;
         }
 
         nav ul {
@@ -94,9 +145,9 @@
         nav ul li a {
             padding: 6px 10px;
             font-weight: 500;
-            transition: color 0.3s ease;
-            text-decoration: none;
             color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.3s;
         }
 
         nav ul li a:hover,
@@ -111,30 +162,12 @@
             color: var(--primary-color);
         }
 
-        /* Hero Section */
+        /* Hero */
         .hero {
             background: var(--gradient-hero);
             color: white;
             padding: 4rem 0;
             margin-top: 70px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-            opacity: 0.3;
-        }
-
-        .hero .container {
-            position: relative;
-            z-index: 2;
             text-align: center;
         }
 
@@ -143,7 +176,6 @@
             font-size: 2.5rem;
             font-weight: 600;
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .hero p {
@@ -153,11 +185,44 @@
             margin: 0 auto;
         }
 
-        /* Section Styles */
+        /* About section */
         .section {
             padding: 3rem 0;
         }
 
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-img img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .about-text h2 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .about-text h3 {
+            margin-top: 1.5rem;
+            font-size: 1.4rem;
+            color: #444;
+        }
+
+        .about-text p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        /* Capabilities */
         .bg-light {
             background: var(--secondary-color);
         }
@@ -168,94 +233,11 @@
         }
 
         .section-title h2 {
+            color: var(--primary-color);
             font-family: 'Montserrat', sans-serif;
             font-size: 2rem;
-            font-weight: 600;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            position: relative;
-            display: inline-block;
         }
 
-        .section-title h2::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background: var(--primary-color);
-            margin: 8px auto 0;
-            border-radius: 2px;
-        }
-
-        .section-title p {
-            font-size: 1.1rem;
-            color: var(--text-light);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* About Content */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .about-img {
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
-        }
-
-        .about-img img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .about-img:hover img {
-            transform: scale(1.05);
-        }
-
-        .about-text h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2rem;
-            font-weight: 600;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            position: relative;
-            display: inline-block;
-        }
-
-        .about-text h2::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background: var(--primary-color);
-            margin: 8px 0 1rem 0;
-            border-radius: 2px;
-        }
-
-        .about-text h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: #444;
-            margin: 2rem 0 1rem;
-        }
-
-        .about-text p {
-            color: var(--text-light);
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
-            font-size: 1rem;
-        }
-
-        /* Grid and Cards */
         .grid {
             display: grid;
             gap: 2rem;
@@ -269,170 +251,141 @@
             background: var(--white);
             border-radius: 12px;
             box-shadow: var(--shadow-md);
-            border: none;
-            transition: all 0.3s ease;
-            overflow: hidden;
+            padding: 2rem;
+            text-align: center;
+            transition: 0.3s;
         }
 
         .card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .card-body {
-            padding: 2.5rem 2rem;
-            text-align: center;
+            transform: translateY(-5px);
         }
 
         .quality-icon {
             width: 80px;
             height: 80px;
-            background: var(--gradient-primary);
             border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1.5rem;
-            position: relative;
-        }
-
-        .quality-icon::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            background: inherit;
-            opacity: 0.2;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); opacity: 0.2; }
-            50% { transform: scale(1.1); opacity: 0.1; }
-            100% { transform: scale(1); opacity: 0.2; }
-        }
-
-        .quality-icon i {
+            margin: 0 auto 1rem;
             font-size: 2rem;
-            color: white;
-            z-index: 1;
-            position: relative;
-        }
-
-        .card h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 1rem;
-        }
-
-        .card p {
-            color: var(--text-light);
-            line-height: 1.6;
         }
 
         /* Footer */
-        .main-footer {
-            background: #222;
+        footer {
+            background: #111;
             color: #ccc;
-            text-align: center;
             padding: 2rem 0;
         }
 
-        .main-footer p {
-            opacity: 0.8;
-            font-size: 0.85rem;
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                display: none;
-                background: var(--white);
-                position: absolute;
-                top: 70px;
-                right: 0;
-                width: 200px;
-                padding: 1rem;
-                box-shadow: 0 3px 12px rgba(0,0,0,0.1);
-            }
+        .footer-col h3 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
 
-            nav.active ul {
-                display: flex;
+        .footer-links li {
+            list-style: none;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .contact-info li {
+            list-style: none;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .contact-info i {
+            color: var(--primary-color);
+        }
+
+        .social-links a {
+            color: #ccc;
+            margin-right: 10px;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #aaa;
+        }
+
+        .contact-info a {
+            color: #efc855;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-info a:hover {
+            color: #f8dc5d;
+            text-decoration: underline;
+        }
+
+        @media(max-width:768px) {
+            .about-content {
+                grid-template-columns: 1fr;
             }
 
             .mobile-menu-btn {
                 display: block;
             }
 
-            .hero {
-                padding: 6rem 0 4rem;
+            nav ul {
+                flex-direction: column;
+                display: none;
+                position: absolute;
+                top: 70px;
+                right: 0;
+                background: var(--white);
+                width: 200px;
+                padding: 1rem;
+                box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
             }
 
-            .hero h2 {
-                font-size: 2rem;
+            nav.active ul {
+                display: flex;
             }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .about-img {
-                order: -1;
-            }
-
-            .section {
-                padding: 3rem 0;
-            }
-
-            .section-title h2 {
-                font-size: 2rem;
-            }
-
-            .grid-3 {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero h2 {
-                font-size: 2rem;
-            }
-
-            .card-body {
-                padding: 2rem 1.5rem;
-            }
-        }
-
-        /* Scroll Animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
         }
     </style>
 </head>
+
+
+
 <body>
+
     <header id="header">
         <div class="container header-container">
             <div class="logo">
                 <img src="images/logo.png" alt="Anuraj Industries Logo">
                 <h1>Anuraj <span>Industries</span></h1>
             </div>
-
             <nav id="nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -442,35 +395,42 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-
-            <div class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </div>
+            <div class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></div>
         </div>
     </header>
 
     <main>
         <section class="hero">
             <div class="container">
-                <h2 class="fade-in">About Anuraj Industries</h2>
-                <p class="fade-in">Leading manufacturer of adhesion promoters for printing inks & paints since 2016</p>
+                <h2>About Anuraj Industries</h2>
+                <p>Leading manufacturer of adhesion promoters for printing inks & paints since 2016</p>
             </div>
         </section>
 
         <section class="section">
             <div class="container">
                 <div class="about-content">
-                    <div class="about-img fade-in">
-                        <img src="https://www.anurajindustries.com/images/slideshow/03.jpeg">
+                    <div class="about-img">
+                        <img src="images/tatdrums.png" alt="About Us">
                     </div>
-                    <div class="about-text fade-in">
+                    <div class="about-text">
                         <h2>Our Story</h2>
-                        <p>Anuraj Industries initiated its business activities in 2016 with the sole aim of providing quality Adhesion Promoter for Printing Inks & Paints. Working with the best team and utilizing advanced technology, we have acquired a position as a reputed manufacturer, exporter and supplier of specialized chemical solutions.</p>
-                        <p>We have established ourselves as a leading supplier of IAC-10 (Titanium Phosphate Complex), Titanium Acetyl Acetonate (TAA), and Titanium Ammonium Lactate (LA) chelate for inks and paints. Our products are embedded with features like superior appearance, color stability, optimal viscosity, excellent adhesion, and resistance to heat.</p>
+                        <p>Anuraj Industries initiated its business activities in 2016 with the sole aim of providing
+                            quality Adhesion Promoter for Printing Inks & Paints. Working with the best team and
+                            utilizing advanced technology, we have acquired a position as a reputed manufacturer,
+                            exporter and supplier of specialized chemical solutions.</p>
+                        <p>We have established ourselves as a leading supplier of IAC-10 (Titanium Phosphate Complex),
+                            Titanium Acetyl Acetonate (TAA), and Titanium Ammonium Lactate (LA) chelate for inks and
+                            paints. Our products are embedded with features like superior appearance, color stability,
+                            optimal viscosity, excellent adhesion, and resistance to heat.</p>
                         <h3>Our Mission</h3>
-                        <p>To provide innovative adhesion promoter solutions for the printing inks and paints industry through advanced chemical technology, skilled workforce, and unwavering commitment to quality and customer satisfaction.</p>
+                        <p>To provide innovative adhesion promoter solutions for the printing inks and paints industry
+                            through advanced chemical technology, skilled workforce, and unwavering commitment to
+                            quality and customer satisfaction.</p>
                         <h3>Our Vision</h3>
-                        <p>To be the preferred partner for adhesion promoter chemicals by continuously improving our formulations, investing in research & development, and expanding our global reach in the printing and coating industry.</p>
+                        <p>To be the preferred partner for adhesion promoter chemicals by continuously improving our
+                            formulations, investing in research & development, and expanding our global reach in the
+                            printing and coating industry.</p>
                     </div>
                 </div>
             </div>
@@ -478,101 +438,101 @@
 
         <section class="section bg-light">
             <div class="container">
-                <div class="section-title fade-in">
+                <div class="section-title">
                     <h2>Our Capabilities</h2>
                     <p>What sets us apart in chemical manufacturing</p>
                 </div>
                 <div class="grid grid-3">
-                    <div class="card fade-in">
-                        <div class="card-body">
-                            <div class="quality-icon">
-                                <i class="fas fa-flask"></i>
-                            </div>
-                            <h3>Advanced Formulations</h3>
-                            <p>Specialized adhesion promoters including IAC-10 (Titanium Phosphate Complex), TAA, and LA chelate with superior performance characteristics.</p>
-                        </div>
+                    <div class="card">
+                        <div class="quality-icon"><i class="fas fa-flask"></i></div>
+                        <h3>Advanced Formulations</h3>
+                        <p>Specialized adhesion promoters including IAC-10 (Titanium Phosphate Complex), TAA, and LA
+                            chelate with superior performance characteristics.</p>
                     </div>
-                    <div class="card fade-in">
-                        <div class="card-body">
-                            <div class="quality-icon">
-                                <i class="fas fa-industry"></i>
-                            </div>
-                            <h3>Quality Manufacturing</h3>
-                            <p>State-of-the-art production facilities with advanced technology ensuring consistent quality in color, viscosity, adhesion, and heat resistance.</p>
-                        </div>
+                    <div class="card">
+                        <div class="quality-icon"><i class="fas fa-industry"></i></div>
+                        <h3>Quality Manufacturing</h3>
+                        <p>State-of-the-art production facilities with advanced technology ensuring consistent quality
+                            in color, viscosity, adhesion, and heat resistance.</p>
                     </div>
-                    <div class="card fade-in">
-                        <div class="card-body">
-                            <div class="quality-icon">
-                                <i class="fas fa-globe"></i>
-                            </div>
-                            <h3>Export Excellence</h3>
-                            <p>Established manufacturer, exporter and supplier serving clients across multiple industries with reliable chemical solutions worldwide.</p>
-                        </div>
+                    <div class="card">
+                        <div class="quality-icon"><i class="fas fa-globe"></i></div>
+                        <h3>Export Excellence</h3>
+                        <p>Established manufacturer, exporter and supplier serving clients across multiple industries
+                            with reliable chemical solutions worldwide.</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="main-footer">
+
+
+    <footer>
         <div class="container">
-            <p>&copy; 2023 Anuraj Industries. All Rights Reserved. | Adhesion Promoters for Printing Inks & Paints</p>
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>About Us</h3>
+                    <p style=" text-align: justify;">Anuraj Industries is a leading manufacturer of precision engineering components with over 25
+                        years of experience in the industry.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="quality.html">Quality</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Products</h3>
+                    <ul class="footer-links">
+                        <li><a href="products.html#cnc">IAC-10 Adhesion Promoter</a></li>
+                        <li><a href="products.html#turned">TAA Adhesion Promoter</a></li>
+                        <li><a href="products.html#special">LA Adhesion Promoter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                             <span>Plot No C 4/5 MIDC Paithan,<br> Dist Chh. Sambhajinagar (Aurangabad) 431148</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span><a href="tel:+917588534055">+91 75885 34055</a></span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span><a href="tel:+917745077123">+91 77450 77123</a></span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>
+                                <a href="mailto:rajutambe5@rediffmail.com">rajutambe5@rediffmail.com</a><br>
+                                <a href="mailto:info@anurajindustries.com">info@anurajindustries.com</a><br>
+                                <a href="mailto:raviraj@anurajindustries.com">raviraj@anurajindustries.com</a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Anuraj Industries. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
 
+
     <script>
-        // Mobile menu functionality
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const nav = document.getElementById('nav');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            nav.classList.toggle('active');
-        });
-
-        // Scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        // Observe all fade-in elements
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('header');
-            if (window.scrollY > 100) {
-                header.style.background = 'var(--secondary-color)';
-                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-                header.classList.add('scrolled');
-            } else {
-                header.style.background = 'var(--white)';
-                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.08)';
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // Initialize animations on load
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                document.querySelectorAll('.hero .fade-in').forEach((el, index) => {
-                    setTimeout(() => {
-                        el.classList.add('visible');
-                    }, index * 200);
-                });
-            }, 300);
-        });
+        mobileMenuBtn.addEventListener('click', () => nav.classList.toggle('active'));
     </script>
+
 </body>
+
 </html>
